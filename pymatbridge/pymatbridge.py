@@ -196,8 +196,10 @@ class _Session(object):
         ])
         command = '%s %s %s "%s"' % (self.executable, self.startup_options,
                                      self._execute_flag(), ','.join(code))
-        subprocess.Popen(command, shell=True, stdin=subprocess.PIPE,
-                         stdout=subprocess.PIPE)
+        subprocess.Popen(command, shell=True,
+                         #stdin=subprocess.PIPE,
+                         #stdout=subprocess.PIPE
+        )
 
     # Start server/client session and make the connection
     def start(self):
